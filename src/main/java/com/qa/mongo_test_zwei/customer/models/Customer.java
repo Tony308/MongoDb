@@ -1,5 +1,4 @@
-package com.qa.mongo_db.customer.domain;
-
+package com.qa.mongo_test_zwei.customer.models;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.annotation.Id;
