@@ -1,16 +1,25 @@
 package com.qa.mongo_test_zwei.customer.models;
 
+import org.bson.types.Binary;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
+@Document(collection = "Customer")
 @Configuration
 public class Customer {
 
     @Id
     private String id;
 
+    @Field
     private String firstName;
+    @Field
     private String lastName;
+
+    @Field
+    private Binary file;
 
     public Customer() {}
 
@@ -41,6 +50,14 @@ public class Customer {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public Binary getFile() {
+        return file;
+    }
+
+    public void setFile(Binary file) {
+        this.file = file;
     }
 
     @Override
